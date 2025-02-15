@@ -1,0 +1,6 @@
+<h1><%="Select a movie from the dropdown list"%></h1>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, prompt: "Choose a movie", required: true %>
+  <%= f.input :comment, required: true %>
+  <%= f.button :submit, "Confirm selection", class:"btn btn-primary"%>
+<% end %>

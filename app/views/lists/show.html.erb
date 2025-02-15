@@ -1,1 +1,8 @@
 <h1><%= @list.name %></h1>
+
+<p><%@list.movies.each do | movie |%></p>
+  <p><%=movie.title%></p>
+  <%= button_to "delete", movie_path(movie), method: :delete %>
+<p><%end%></p>
+
+<%= link_to "Add a movie", new_list_bookmark_path(@list), class:"btn btn-primary" %>
